@@ -9,9 +9,9 @@
   "author": "Troulet",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.6.0"
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Troulet/DiscordBot.git"
