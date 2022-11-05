@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.6.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Troulet/DiscordBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Troulet/DiscordBot/issues"
+  },
+  "homepage": "https://github.com/Troulet/DiscordBot#readme"
 }
