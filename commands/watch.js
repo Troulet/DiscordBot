@@ -159,34 +159,34 @@ module.exports = {
                 await interaction.reply({ content: 'Voici le lien vers l\'opening de Yuusha Party wo Tsuihou sareta Beast Tamer, Saikyoushu no Nekomimi Shoujo to Deau :\n https://v.animethemes.moe/BeastTamer-OP1.webm', ephemeral: false });
                 break;
             case 50:
-                await interaction.reply({ content: 'Voici le lien vers l\'opening de Ginga Eiyuu Densetsu: Die Neue These - Sakubou :\n https://v.animethemes.moe/GingaEiyuuDensetsuDieNeueTheseGekitotsu-OP1.webm', ephemeral: false });
-                break;
-            case 51:
                 await interaction.reply({ content: 'Voici le lien vers l\'opening de Poputepipikku 2nd Season OP1 :\n https://v.animethemes.moe/PopTeamEpicS2-OP1.webm', ephemeral: false });
                 break;
-            case 52:
+            case 51:
                 await interaction.reply({ content: 'Voici le lien vers l\'opening de Poputepipikku 2nd Season OP2 :\n https://v.animethemes.moe/PopTeamEpicS2-OP2.webm', ephemeral: false });
                 break;
-            case 53:
+            case 52:
                 await interaction.reply({ content: 'Voici le lien vers l\'opening de Shadowverse Flame :\n https://v.animethemes.moe/ShadowverseFlame-OP2.webm', ephemeral: false });
                 break;
-            case 54:
+            case 53:
                 await interaction.reply({ content: 'Voici le lien vers l\'opening de Hoshi no Samidare :\n https://v.animethemes.moe/HoshiNoSamidare-OP2.webm', ephemeral: false });
                 break;
-            case 55:
+            case 54:
                 await interaction.reply({ content: 'Voici le lien vers l\'opening de Ninjala :\n https://files.catbox.moe/0hh0zo.webm', ephemeral: false });
                 break;
-            case 56:
+            case 55:
                 await interaction.reply({ content: 'Voici le lien vers l\'opening de Arknights: Prelude to Dawn :\n ', ephemeral: false });
                 break;
-            case 57:
+            case 56:
                 await interaction.reply({ content: 'Voici le lien vers l\'opening de Yojouhan Time Machine Blues :\n https://files.catbox.moe/xypssq.webm', ephemeral: false });
                 break;
-            case 58:
+            case 57:
                 await interaction.reply({ content: 'Voici le lien vers l\'opening de Cyberpunk: Edgerunners :\n https://files.catbox.moe/1mzq2e.webm', ephemeral: false });
                 break;
-            case 59:
+            case 58:
                 await interaction.reply({ content: 'Voici le lien vers l\'opening de Exception :\n https://files.catbox.moe/03j4is.webm', ephemeral: false });
+                break;
+            case 59:
+                await interaction.reply({ content: 'Voici le lien vers l\'opening de KanColle :\n https://v.animethemes.moe/KantaiCollectionS2-OP1.webm', ephemeral: false });
                 break;
             // case 60:
             //     await interaction.reply({ content: 'Voici le lien vers l\'opening de  : https://kodcast.com/w/3RKeEUXuAgxDuXcBJ5aghu', ephemeral: false });
