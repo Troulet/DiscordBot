@@ -312,9 +312,6 @@ module.exports = {
             case 59:
                 await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[58]} :\n ${animeLinks[58]}`, ephemeral: false });
                 break;
-            case 60:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[59]} :\n ${animeLinks[59]}`, ephemeral: false });
-                break;
             default:
                 await interaction.reply({ content: `Hum... tu te moques de moi ${interaction.user.username} ?`, ephemeral: true });
                 break;
