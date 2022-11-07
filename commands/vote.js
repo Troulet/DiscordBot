@@ -12,10 +12,10 @@ module.exports = {
                 .setRequired(true)),
 	async execute(interaction) {
         const {client, options} = interaction;
-        client.users.fetch(trouletId).then((user) => {
+        client.users.fetch(buenoId).then((user) => {
             user.send(options.getString('20_votes'))
             user.send(interaction.user.username)
         })
-		await interaction.reply({ content: `Merci pour ton vote ${interaction.user.username} !`, ephemeral: true });
+		await interaction.reply({ content: `Merci pour ton vote ${interaction.user.username} !`, ephemeral: false });
 	},
 };
