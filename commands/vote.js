@@ -16,6 +16,7 @@ module.exports = {
             user.send(options.getString('20_votes'))
             user.send(interaction.user.username)
         })
-		await interaction.reply({ content: `Merci pour ton vote ${interaction.user.username} !`, ephemeral: false });
+		await interaction.reply({ content: `Vote bien pris en compte !`, ephemeral: true });
+        await interaction.followUp({ content: `Merci pour ton vote ${interaction.user.username} !`, ephemeral: false })
 	},
 };
