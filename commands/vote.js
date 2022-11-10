@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require("discord.js");
 const buenoId = '229241724130557952'
 const trouletId = '321215339079925761'
-const re = /\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+\D*\d+/gm
+const re = /\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+\D+\d+/gm
 let voteList = []
 
 module.exports = {
