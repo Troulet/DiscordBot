@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require("discord.js");
 const buenoId = '229241724130557952'
 const trouletId = '321215339079925761'
-const re = new RegExp('(\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*.\d*)')
+const re = new RegExp('\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+.\d+')
 let voteList = []
 
 module.exports = {
@@ -17,9 +17,9 @@ module.exports = {
         
         if(re.test(options.getString('20_votes')) && !voteList.includes(interaction.user.username)){
             client.users.fetch(trouletId).then((user) => {
-                user.send(voteList)
+                user.send(voteList.toString())
                 voteList.push(interaction.user.username)
-                user.send(voteList)
+                user.send(voteList.toString())
                 user.send(options.getString('20_votes'))
                 user.send(interaction.user.username)
             })
