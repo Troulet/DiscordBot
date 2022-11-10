@@ -16,7 +16,7 @@ module.exports = {
         const {client, options} = interaction;
         
         if(re.test(options.getString('20_votes')) && !voteList.includes(interaction.user.username)){
-            client.users.fetch(trouletId).then((user) => {
+            client.users.fetch(buenoId).then((user) => {
                 user.send(options.getString('20_votes'))
                 user.send(interaction.user.username)
             })
