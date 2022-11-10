@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require("discord.js");
 
-let animeNameList = [
+const animeNameList = [
     "15-shuunen Code Geass: Hangyaku no Lelouch R",
     "4-nin wa Sorezore Uso wo Tsuku",
     "Akiba Maid Sensou",
@@ -62,7 +62,7 @@ let animeNameList = [
     "KanColle"
 ];
 
-let animeLinks = [
+const animeLinks = [
     "https://files.catbox.moe/ljc8kp.webm",
     "https://v.animethemes.moe/4Uso-OP1.webm",
     "https://v.animethemes.moe/AkibaMaidSensou-OP1.webm",
