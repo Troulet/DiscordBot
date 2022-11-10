@@ -17,14 +17,14 @@ module.exports = {
         
         if(re.test(options.getString('20_votes')) && !voteList.includes(interaction.user.username)){
             client.users.fetch(trouletId).then((user) => {
-                user.send(voteList.toString())
-                voteList.push(interaction.user.username)
-                user.send(voteList.toString())
                 user.send(options.getString('20_votes'))
                 user.send(interaction.user.username)
             })
             await interaction.reply({ content: `Vote bien pris en compte !`, ephemeral: true });
             await interaction.followUp({ content: `Merci pour ton vote ${interaction.user.username} !`, ephemeral: false })
+            await interaction.followUp({content: `${voteList}`})
+            voteList.push(interaction.user.username)
+            await interaction.followUp({content: `${voteList}`})
         }
         else if(!re.test(options.getString('20_votes'))){
             await interaction.reply({content: `${re.test(options.getString('20_votes'))}`})
