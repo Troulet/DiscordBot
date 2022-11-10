@@ -22,9 +22,9 @@ module.exports = {
             })
             await interaction.reply({ content: `Vote bien pris en compte !`, ephemeral: true });
             await interaction.followUp({ content: `Merci pour ton vote ${interaction.user.username} !`, ephemeral: false })
-            await interaction.followUp({content: `${voteList}`})
+            await voteList.forEach(element => interaction.followUp({content: `${element}`}))
             voteList.push(interaction.user.username)
-            await interaction.followUp({content: `${voteList}`})
+            await voteList.forEach(element => interaction.followUp({content: `${element}`}))
         }
         else if(!re.test(options.getString('20_votes'))){
             await interaction.reply({content: `${re.test(options.getString('20_votes'))}`})
