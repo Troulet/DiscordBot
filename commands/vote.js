@@ -21,7 +21,6 @@ module.exports = {
             })
             await interaction.reply({ content: `Vote bien pris en compte !`, ephemeral: true });
             await interaction.followUp({ content: `Merci pour ton vote ${interaction.user.username} !`, ephemeral: false })
-            voteList.push(interaction.user.username)
         }
         else {
             await interaction.reply({content: `${re.test(options.getString('20_votes'))}`})
