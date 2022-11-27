@@ -2,7 +2,6 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Events, GatewayIntentBits, Collection, Message, User } = require('discord.js');
 require("dotenv").config();
-const keep_alive = require('./keepAlive.js')
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
