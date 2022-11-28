@@ -23,7 +23,6 @@ module.exports = {
             await interaction.followUp({ content: `Merci pour ton vote ${interaction.user.username} !`, ephemeral: false })
         }
         else {
-            await interaction.reply({content: `${re.test(options.getString('20_votes'))}`})
             await interaction.reply({ content: `Ton vote est incorrect, réessaie ${interaction.user.username} !`, ephemeral: true })
         }
 	},
