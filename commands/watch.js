@@ -1,127 +1,89 @@
 const { SlashCommandBuilder } = require("discord.js");
 
 const animeNameList = [
-    "15-shuunen Code Geass: Hangyaku no Lelouch R",
-    "4-nin wa Sorezore Uso wo Tsuku",
-    "Akiba Maid Sensou",
-    "Akuyaku Reijou nanode Last Boss wo Kattemimashita",
-    "Berserk : Ougon Jidaihen MEMORIAL EDITION",
-    "Bleach: Sennen Kessen-hen",
-    "Blue Lock",
-    "Bocchi the Rock!",
-    "Boku no Hero Academia 6th Season",
-    "C Danchi",
-    "Chainsaw Man",
-    "Cool Doji Danshi",
-    "Detective Conan: Hannin no Hanzawa-san",
-    "Do It Yourself!",
-    "Duel Masters Win",
-    "Eternal Boys",
-    "Futoku no Guild",
-    "Fuufu Ijou, Koibito Miman",
-    "Golden Kamuy 4th Season",
-    "Human Bug Daigaku Fushi Gakubu Fukou Gakka",
-    "IDOLiSH7: Third Beat! 2nd Season",
-    "Kage no Jitsuryokusha ni Naritakute!",
-    "Koukyuu no Karasu",
-    "Mairimashita! Iruma-kun 3rd Season",
-    "Megaton-kyuu Musashi Season 2",
-    "Mob Psycho 100 III",
+    "Ousama Ranking",
+    "Kimetsu no Yaiba: Yuukaku-hen",
+    "Akebi-chan no Sailor fuku",
+    "Arifureta Shokugyou de Sekai Saikyou 2nd Season",
+    "Sabikui Bisco",
+    "Dolls' Frontline",
+    "Sono Bisque Doll wa Koi wo suru",
+    "Tokyo 24-ku",
+    "Shingeki no Kyojin: The Final Season Part 2",
+    "Orient",
+    "Paripi Koumei",
+    "Healer Girl",
+    "Gunjou no Fanfare",
+    "BUILD-DIVIDE -#FFFFFF- CODE WHITE",
+    "Black Rock Shooter : Dawn Fall",
+    "Mahoutsukai Reimeiki",
+    "Dance Dance Danseur",
+    "Honzuki no Gekokujou : Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen 3",
+    "Yuusha, Yamemasu",
+    "Date A Live IV",
+    "Lycoris Recoil",
+    "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 2nd Season",
+    "Made in Abyss: Retsujitsu no Ougonkyou OP 2",
+    "Overlord IV",
+    "Shadows House 2nd Season",
+    "Isekai Ojisan",
+    "Code Geass: Lelouch of the Rebellion R2",
+    "Kanojo, Okarishimasu 2nd Season",
+    "Bastard!!: Ankoku no Hakaishin (ONA)",
+    "Yofukashi no Uta",
     "Mobile Suit Gundam: The Witch from Mercury",
-    "Mushikaburi-hime",
-    "Muv-Luv Alternative 2nd Season",
-    "Noumin Kanren no Skill Bakka Agetetara Nazeka Tsuyoku Natta",
-    "Obake Zukan!",
-    "Peter Grill to Kenja no Jikan: Super Extra",
-    "Reiwa no Di Gi Charat",
-    "Renai Flops",
-    "Romantic Killer",
-    "Seiken Densetsu: Legend of Mana - The Teardrop Crystal",
-    "Shinmai Renkinjutsushi no Tenpo Keiei",
-    "Shinobi no Ittoki",
+    "Mob Psycho 100 III",
     "SPY×FAMILY Part 2",
-    "Sylvanian Families: Freya no Happy Diary",
-    "Tensei shitara Ken Deshita",
-    "Uchi no Shishou wa Shippo ga Nai",
+    "Chainsaw Man",
+    "Bocchi the Rock!",
+    "Romantic Killer",
     "Urusei Yatsura (2022)",
-    "Uzaki-chan wa Asobitai! ω",
-    "Vazzrock The Animation OP1",
-    "Vazzrock The Animation OP2",
-    "Yama no Susume: Next Summit",
-    "Yowamushi Pedal: Limit Break",
-    "Yuusha Party wo Tsuihou sareta Beast Tamer, Saikyoushu no Nekomimi Shoujo to Deau",
-    "Poputepipikku 2nd Season OP1",
-    "Poputepipikku 2nd Season OP2",
+    "Renai Flops",
     "Hoshi no Samidare",
-    "Shadowverse Flame",
-    "Ninjala",
-    "Arknights: Prelude to Dawn",
-    "Yojouhan Time Machine Blues",
-    "Cyberpunk: Edgerunners",
-    "Exception",
-    "KanColle"
+    "Tensei shitara Ken Deshita"
 ];
 
 const animeLinks = [
-    "https://files.catbox.moe/ljc8kp.webm",
-    "https://v.animethemes.moe/4Uso-OP1.webm",
-    "https://v.animethemes.moe/AkibaMaidSensou-OP1.webm",
-    "https://v.animethemes.moe/Akulas-OP1.webm",
-    "https://v.animethemes.moe/Berserk2022-OP1.webm",
-    "https://v.animethemes.moe/Bleach2022-OP1.webm",
-    "https://v.animethemes.moe/BlueLock-OP1.webm",
-    "https://v.animethemes.moe/BocchiTheRock-OP1.webm",
-    "https://v.animethemes.moe/BokuNoHeroAcademiaS6-OP1.webm",
-    "https://v.animethemes.moe/CDanchi-OP1.webm",
-    "https://v.animethemes.moe/ChainsawMan-OP1.webm",
-    "https://v.animethemes.moe/CoolDojiDanshi-OP1.webm",
-    "https://v.animethemes.moe/HanninNoHanzawaSan-OP1.webm",
-    "https://v.animethemes.moe/DoItYourself-OP1.webm",
-    "https://files.catbox.moe/jf7gvb.webm",
-    "https://files.catbox.moe/4swuoc.webm",
-    "https://v.animethemes.moe/FutokuNoGuild-OP1.webm",
-    "https://v.animethemes.moe/Fuukoi-OP1.webm",
-    "https://v.animethemes.moe/GoldenKamuyS4-OP1.webm",
-    "https://v.animethemes.moe/HumanBugDaigaku-OP1.webm",
-    "https://v.animethemes.moe/IDOLiSH7S3Part2-OP1.webm",
-    "https://v.animethemes.moe/ShadowGarden-OP1.webm",
-    "https://v.animethemes.moe/KoukyuuNoKarasu-OP1.webm",
-    "https://v.animethemes.moe/MairimashitaIrumaKunS3-OP1.webm",
-    "https://files.catbox.moe/qxag3v.webm",
-    "https://v.animethemes.moe/MobPsycho100S3-OP1.webm",
+    "https://files.catbox.moe/4j6rpg.webm",
+    "https://files.catbox.moe/rrljjp.webm",
+    "https://files.catbox.moe/rknfhf.webm",
+    "https://files.catbox.moe/6oghqb.webm",
+    "https://files.catbox.moe/4r6gcm.webm",
+    "https://files.catbox.moe/v7wm2h.webm",
+    "https://files.catbox.moe/j5nu6u.webm",
+    "https://files.catbox.moe/sgm8qt.webm",
+    "https://files.catbox.moe/swtmir.webm",
+    "https://files.catbox.moe/geju2x.webm",
+    "https://files.catbox.moe/1lqk8b.webm",
+    "https://files.catbox.moe/ms0txc.webm",
+    "https://files.catbox.moe/3erpl8.webm",
+    "https://files.catbox.moe/7of6dx.webm",
+    "https://files.catbox.moe/h21aoi.webm",
+    "https://files.catbox.moe/mdq0py.webm",
+    "https://files.catbox.moe/s1afy2.webm",
+    "https://files.catbox.moe/ykkmod.webm",
+    "https://files.catbox.moe/8vzqvh.webm",
+    "https://files.catbox.moe/sj4bw6.webm",
+    "https://files.catbox.moe/ebkfx8.webm",
+    "https://files.catbox.moe/0uewx3.webm",
+    "https://files.catbox.moe/s8syf0.webm",
+    "https://files.catbox.moe/yiya3d.webm",
+    "https://files.catbox.moe/kf45kf.webm",
+    "https://files.catbox.moe/9ya3br.webm",
+    "https://files.catbox.moe/1tc7hx.webm",
+    "https://files.catbox.moe/znt3v6.webm",
+    "https://files.catbox.moe/77ly8n.webm",
+    "https://files.catbox.moe/2p06fq.webm",
     "https://v.animethemes.moe/GundamTheWitchFromMercury-OP1.webm",
-    "https://v.animethemes.moe/MushikaburiHime-OP1.webm",
-    "https://v.animethemes.moe/MuvLuvAlternativeS2-OP1.webm",
-    "https://v.animethemes.moe/NouminKanren-OP1.webm",
-    "https://files.catbox.moe/u7gkt6.webm",
-    "https://v.animethemes.moe/PeterGrillToKenjaNoJikanSuperExtra-OP1.webm",
-    "https://files.catbox.moe/40eiih.webm",
-    "https://v.animethemes.moe/RenaiFlops-OP1.webm",
-    "https://files.catbox.moe/ergo0p.webm",
-    "https://v.animethemes.moe/SeikenDensetsu-OP1.webm",
-    "https://v.animethemes.moe/ShinmaiRenkin-OP1.webm",
-    "https://v.animethemes.moe/ShinobiNoIttoki-OP1.webm",
+    "https://v.animethemes.moe/MobPsycho100S3-OP1.webm",
     "https://v.animethemes.moe/SpyXFamilyPart2-OP1.webm",
-    "https://files.catbox.moe/91lppj.webm",
-    "https://v.animethemes.moe/Tenken-OP1.webm",
-    "https://v.animethemes.moe/ShippoNa-OP1.webm",
+    "https://v.animethemes.moe/ChainsawMan-OP1.webm",
+    "https://v.animethemes.moe/BocchiTheRock-OP1.webm",
+    "https://files.catbox.moe/ergo0p.webm",
     "https://v.animethemes.moe/UruseiYatsura2022-OP1.webm",
-    "https://v.animethemes.moe/UzakiChanWaAsobitaiS2-OP1.webm",
-    "https://v.animethemes.moe/Vazzrock-OP1.webm",
-    "https://files.catbox.moe/om9wtd.webm",
-    "https://v.animethemes.moe/YamaNoSusumeS4-OP1.webm",
-    "https://v.animethemes.moe/YowamushiPedalLimitBreak-OP1.webm",
-    "https://v.animethemes.moe/BeastTamer-OP1.webm",
-    "https://v.animethemes.moe/PopTeamEpicS2-OP1.webm",
-    "https://v.animethemes.moe/PopTeamEpicS2-OP2.webm",
-    "https://v.animethemes.moe/ShadowverseFlame-OP2.webm",
+    "https://v.animethemes.moe/RenaiFlops-OP1.webm",
     "https://v.animethemes.moe/HoshiNoSamidare-OP2.webm",
-    "https://files.catbox.moe/0hh0zo.webm",
-    "https://files.catbox.moe/e50t9t.webm",
-    "https://files.catbox.moe/xypssq.webm",
-    "https://files.catbox.moe/1mzq2e.webm",
-    "https://files.catbox.moe/03j4is.webm",
-    "https://v.animethemes.moe/KantaiCollectionS2-OP1.webm"
+    "https://v.animethemes.moe/Tenken-OP1.webm"
 ]
 
 module.exports = {
@@ -255,66 +217,66 @@ module.exports = {
             case 40:
                 await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[39]} :\n ${animeLinks[39]}`, ephemeral: false });
                 break;
-            case 41:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[40]} :\n ${animeLinks[40]}`, ephemeral: false });
-                break;
-            case 42:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[41]} :\n ${animeLinks[41]}`, ephemeral: false });
-                break;
-            case 43:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[42]} :\n ${animeLinks[42]}`, ephemeral: false });
-                break;
-            case 44:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[43]} :\n ${animeLinks[43]}`, ephemeral: false });
-                break;
-            case 45:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[44]} :\n ${animeLinks[44]}`, ephemeral: false });
-                break;
-            case 46:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[45]} :\n ${animeLinks[45]}`, ephemeral: false });
-                break;
-            case 47:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[46]} :\n ${animeLinks[46]}`, ephemeral: false });
-                break;
-            case 48:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[47]} :\n ${animeLinks[47]}`, ephemeral: false });
-                break;
-            case 49:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[48]} :\n ${animeLinks[48]}`, ephemeral: false });
-                break;
-            case 50:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[49]} :\n ${animeLinks[49]}`, ephemeral: false });
-                break;
-            case 51:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[50]} :\n ${animeLinks[50]}`, ephemeral: false });
-                break;
-            case 52:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[51]} :\n ${animeLinks[51]}`, ephemeral: false });
-                break;
-            case 53:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[52]} :\n ${animeLinks[52]}`, ephemeral: false });
-                break;
-            case 54:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[53]} :\n ${animeLinks[53]}`, ephemeral: false });
-                break;
-            case 55:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[54]} :\n ${animeLinks[54]}`, ephemeral: false });
-                break;
-            case 56:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[55]} :\n ${animeLinks[55]}`, ephemeral: false });
-                break;
-            case 57:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[56]} :\n ${animeLinks[56]}`, ephemeral: false });
-                break;
-            case 58:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[57]} :\n ${animeLinks[57]}`, ephemeral: false });
-                break;
-            case 59:
-                await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[58]} :\n ${animeLinks[58]}`, ephemeral: false });
-                break;
-            default:
-                await interaction.reply({ content: `Hum... tu te moques de moi ${interaction.user.username} ?`, ephemeral: true });
-                break;
+            // case 41:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[40]} :\n ${animeLinks[40]}`, ephemeral: false });
+            //     break;
+            // case 42:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[41]} :\n ${animeLinks[41]}`, ephemeral: false });
+            //     break;
+            // case 43:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[42]} :\n ${animeLinks[42]}`, ephemeral: false });
+            //     break;
+            // case 44:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[43]} :\n ${animeLinks[43]}`, ephemeral: false });
+            //     break;
+            // case 45:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[44]} :\n ${animeLinks[44]}`, ephemeral: false });
+            //     break;
+            // case 46:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[45]} :\n ${animeLinks[45]}`, ephemeral: false });
+            //     break;
+            // case 47:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[46]} :\n ${animeLinks[46]}`, ephemeral: false });
+            //     break;
+            // case 48:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[47]} :\n ${animeLinks[47]}`, ephemeral: false });
+            //     break;
+            // case 49:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[48]} :\n ${animeLinks[48]}`, ephemeral: false });
+            //     break;
+            // case 50:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[49]} :\n ${animeLinks[49]}`, ephemeral: false });
+            //     break;
+            // case 51:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[50]} :\n ${animeLinks[50]}`, ephemeral: false });
+            //     break;
+            // case 52:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[51]} :\n ${animeLinks[51]}`, ephemeral: false });
+            //     break;
+            // case 53:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[52]} :\n ${animeLinks[52]}`, ephemeral: false });
+            //     break;
+            // case 54:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[53]} :\n ${animeLinks[53]}`, ephemeral: false });
+            //     break;
+            // case 55:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[54]} :\n ${animeLinks[54]}`, ephemeral: false });
+            //     break;
+            // case 56:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[55]} :\n ${animeLinks[55]}`, ephemeral: false });
+            //     break;
+            // case 57:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[56]} :\n ${animeLinks[56]}`, ephemeral: false });
+            //     break;
+            // case 58:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[57]} :\n ${animeLinks[57]}`, ephemeral: false });
+            //     break;
+            // case 59:
+            //     await interaction.reply({ content: `Voici le lien vers l\'opening de ${animeNameList[58]} :\n ${animeLinks[58]}`, ephemeral: false });
+            //     break;
+            // default:
+            //     await interaction.reply({ content: `Hum... tu te moques de moi ${interaction.user.username} ?`, ephemeral: true });
+            //     break;
         }
 	},
 };

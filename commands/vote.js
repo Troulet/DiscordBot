@@ -25,5 +25,7 @@ module.exports = {
         else {
             await interaction.reply({ content: `Ton vote est incorrect, réessaie ${interaction.user.username} !`, ephemeral: true })
         }
+
+        // await interaction.reply({ content: `Le temps pour voter est finis, réessaie la saison prochaine !`, ephemeral: true})
 	},
 };
