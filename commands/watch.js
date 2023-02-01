@@ -135,7 +135,7 @@ const animeLinks = [
     "https://files.catbox.moe/5nj3bf.webm",
     "https://files.catbox.moe/ja599q.webm",
     "https://files.catbox.moe/87qpg5.webm",
-    ""
+    "https://files.catbox.moe/beas1a.webm"
 ]
 
 module.exports = {
