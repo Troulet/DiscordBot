@@ -121,7 +121,7 @@ const animeLinks = [
     "https://files.catbox.moe/87y2l5.webm",
     "https://files.catbox.moe/gkq41z.webm",
     "https://files.catbox.moe/eeakk9.webm",
-    "https://files.catbox.moe/0qo373.webm",
+    "https://files.catbox.moe/glpg3u.webm",
     "https://files.catbox.moe/0w10e2.webm",
     "https://files.catbox.moe/5qv6nw.webm",
     "https://files.catbox.moe/u07fyx.webm",
